@@ -1,20 +1,25 @@
-package cn.qingyuyu.yulauncher;
+package cn.qingyuyu.yuserver;
 
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.concurrent.*;
 
 
 public class YuServer {
 public static void main(String [] str)
 {
-	Thread listener = new Thread(new Runnable() {// 新建监听线程
+	final int THREAD_MAX=150;//max thread number,you can change it<255
+	final int PORT=2333;//listen port
+	Thread listener = new Thread(new Runnable() {// new listen thread
 		public void run() {
 			try {
 				@SuppressWarnings("resource")
-				ServerSocket svrSocket = new ServerSocket(2333); // 监听端口
+				ServerSocket svrSocket = new ServerSocket(PORT); // listen socket
+				ExecutorService fixedThreadPool = Executors.newFixedThreadPool(THREAD_MAX);  
 				while (true) {
-					Socket socket = svrSocket.accept(); // 阻塞
-					new ListenerThread(socket).start();// 开启子线程处理请求
+					Socket socket = svrSocket.accept(); // wait for request
+					fixedThreadPool.execute(new YuThread(socket));
+					// 开启子线程处理请求
 				}
 			} catch (Exception e) {
 				System.out.println(e.toString());
@@ -22,6 +27,6 @@ public static void main(String [] str)
 		}
 	});
 
-	lintener.start();// 开启监听线程
+	listener.start();// 开启监听线程
 }
 }
