@@ -19,6 +19,7 @@ public class User {
 			if (rs.next())
 				b = true;
 		} catch (Exception e) {
+			Log.getInstance().e("checkUser", e.toString());
 			b = false;
 		} finally {
 			SqlHelper.close(rs, SqlHelper.getPs(), SqlHelper.getCt());
@@ -35,7 +36,7 @@ public class User {
 				SqlHelper.executeUpdate(sql, parameters);
 				b = true;
 			} catch (SQLException e) {
-				Log.getInstance().e("MySql", e.toString());
+				Log.getInstance().e("Insert", e.toString());
 				b = false;
 			}
 			finally{
@@ -43,5 +44,21 @@ public class User {
 			}
 		
 		return b;
+	}
+	public String getDataFromBase() {
+		String data = null;
+		String sql = "Select * from data where token=?";
+		String parameters[] = { token };
+		ResultSet rs = SqlHelper.executeQuery(sql, parameters);
+		try {
+			if (rs.next())
+				data=rs.getString(2);
+		} catch (Exception e) {
+			Log.getInstance().e("getData", e.toString());
+			data="error in database";
+		} finally {
+			SqlHelper.close(rs, SqlHelper.getPs(), SqlHelper.getCt());
+		}
+		return data;
 	}
 }

@@ -43,51 +43,66 @@ public class YuThread implements Callable<Boolean> {
 					sendDataJson.key("msg");
 					sendDataJson.value("time out");
 					sendDataJson.endObject();
-					os.write((sendDataJson.toString()+"\n").getBytes("UTF-8"));
+					os.write((sendDataJson.toString() + "\n").getBytes("UTF-8"));
 					os.flush();
 					s.shutdownOutput();
 					s.close();
 					return false;
 				}
 			}
-
 			try {
 				recJson = new JSONObject(recData);
-				String token=recJson.getString("token");
-				if(token==null)//json format error
+				String token = recJson.getString("token");
+				if (token == null)// json format error
 				{
 					sendDataJson.key("code");
 					sendDataJson.value("fail");
 					sendDataJson.key("msg");
 					sendDataJson.value("format error");
 				}
-				User u=new User(token);
-				if(u.checkUser())//user in our database
+				User u = new User(token);
+				if (u.checkUser())// user in our database
 				{
-					if(!u.insertIntoDatabase(recJson.getString("data")))//have some error when try to store up this data
+					if (recJson.getString("need").equals("set")) 
+					{
+						if (!u.insertIntoDatabase(recJson.getString("data")))// have some error when try to store up this data								
+						{
+							sendDataJson.key("code");
+							sendDataJson.value("fail");
+							sendDataJson.key("msg");
+							sendDataJson.value("error in data store up");
+						} else// every thing ok,maybe
+						{
+							sendDataJson.key("code");
+							sendDataJson.value("ok");
+							sendDataJson.key("time");
+							sendDataJson.value(System.currentTimeMillis()/1000L);
+						}
+					}
+					else if (recJson.getString("need").equals("get")) {
+						sendDataJson.key("code");
+						sendDataJson.value("ok");
+						sendDataJson.key("time");
+						sendDataJson.value(System.currentTimeMillis()/1000L);
+						sendDataJson.key("data");
+						sendDataJson.value(u.getDataFromBase());
+					}
+					else
 					{
 						sendDataJson.key("code");
 						sendDataJson.value("fail");
 						sendDataJson.key("msg");
-						sendDataJson.value("error in data store up");
+						sendDataJson.value("error in need");
 					}
-					else//every thing ok,maybe
-					{
-						sendDataJson.key("code");
-						sendDataJson.value("ok");
-						sendDataJson.key("msg");
-						sendDataJson.value("looks like nothing wrong");
-					}
-					
+
 				}
-				else//user not register in our database
+				else// user not register in our database
 				{
 					sendDataJson.key("code");
 					sendDataJson.value("fail");
 					sendDataJson.key("msg");
 					sendDataJson.value("user not exist");
 				}
-				
 
 			} catch (JSONException e) {
 				sendDataJson.key("code");
@@ -98,7 +113,7 @@ public class YuThread implements Callable<Boolean> {
 			}
 			sendDataJson.endObject();
 
-			os.write((sendDataJson.toString()+"\n").getBytes("UTF-8"));
+			os.write((sendDataJson.toString() + "\n").getBytes("UTF-8"));
 			os.flush();
 			s.shutdownOutput();
 			Log.getInstance().d("recData", recData);
