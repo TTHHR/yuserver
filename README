@@ -1,5 +1,12 @@
 #  数据储存服务
 
+port 2333 for socket
+
+port 2334 for udp
+
+etc.
+
+
 create database yuserver;
 
 create table yuuser(token varchar(50) primary key);
