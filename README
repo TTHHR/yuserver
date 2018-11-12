@@ -1,1 +1,7 @@
-数据的储存和获取
+#  鏁版嵁鍌ㄥ瓨鏈嶅姟
+
+create database yuserver;
+
+create table yuuser(token varchar(50) primary key);
+
+create table yudata(token varchar(50) primary key,data varchar(500));

@@ -7,12 +7,12 @@ import java.io.OutputStream;
 import java.net.*;
 import java.util.concurrent.Callable;
 
+import cn.qingyuyu.yuserver.util.User;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.json.JSONStringer;
 
 import cn.qingyuyu.yuserver.util.Log;
-import cn.qingyuyu.yuserver.util.User;
 
 public class YuThread implements Callable<Boolean> {
 	Socket s;
@@ -25,7 +25,7 @@ public class YuThread implements Callable<Boolean> {
 	public Boolean call() throws Exception {
 		// TODO Auto-generated method stub
 		try {
-			String recData = new String(), tmp = null;
+			String recData = "", tmp = null;
 			JSONObject recJson;
 			JSONStringer sendDataJson = new JSONStringer();
 			sendDataJson.object();
