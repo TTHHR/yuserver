@@ -25,7 +25,7 @@ public class Log {
 				logFile.createNewFile();
 
 			fileName=logFile.getName();
-			bw = new BufferedWriter(new FileWriter(df.format(new Date()).toString() + ".log", true));
+			bw = new BufferedWriter(new FileWriter(df.format(new Date()) + ".log", true));
 		} catch (Exception e) {
 			System.out.println("Log File Error");
 		}
@@ -46,8 +46,9 @@ public class Log {
 		SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");// set date
 		if(l==null)
 			l=new Log();
-		else if(l.fileName.equals(df.format(new Date()) + ".log"))
+		else
 		{
+			if(!l.fileName.equals(df.format(new Date()) + ".log"))
 			l=new Log();
 		}
 
