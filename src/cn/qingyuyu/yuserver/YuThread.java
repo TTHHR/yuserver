@@ -24,13 +24,13 @@ public class YuThread implements Callable<Boolean> {
 
 			InputStream is = s.getInputStream();
 			OutputStream os = s.getOutputStream();
-			BufferedReader br = new BufferedReader(new InputStreamReader(is, "ASCII"));
+			BufferedReader br = new BufferedReader(new InputStreamReader(is, "utf-8"));
 			while ((tmp = br.readLine()) != null) {
 				recData += tmp;
 				if (Thread.currentThread().isInterrupted())// thread timeout
 				{
 
-					os.write(("{\"code\":\"file\",\"msg\":\"time out\"}" + "\n").getBytes("ASCII"));
+					os.write(("{\"code\":\"file\",\"msg\":\"time out\"}" + "\n").getBytes("utf-8"));
 					os.flush();
 					s.shutdownOutput();
 					s.close();
@@ -39,10 +39,9 @@ public class YuThread implements Callable<Boolean> {
 			}
 			String bmsg=MainPresenter.recAndBackMsg(recData);
 
-			os.write(( bmsg+ "\n").getBytes("ASCII"));
+			os.write(( bmsg+ "\n").getBytes("utf-8"));
 			os.flush();
 			s.shutdownOutput();
-			Log.getInstance().d("recData", recData);
 		} catch (Exception e) {
 			Log.getInstance().e("runTime", e.toString());
 			return false;

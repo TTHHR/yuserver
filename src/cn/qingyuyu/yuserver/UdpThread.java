@@ -29,7 +29,6 @@ public class UdpThread implements Runnable {
                 /****** 解析数据报****/
                 String receStr = new String(datagramPacket.getData(), 0 , datagramPacket.getLength());
 
-                Log.getInstance().d("recData", receStr);
 
                 String bmsg="";
                 if(!receStr.equals(""))
