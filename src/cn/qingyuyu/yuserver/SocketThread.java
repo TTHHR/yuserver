@@ -9,10 +9,10 @@ import java.util.concurrent.Callable;
 
 import cn.qingyuyu.yuserver.util.Log;
 
-public class YuThread implements Callable<Boolean> {
+public class SocketThread implements Callable<Boolean> {
 	Socket s;
 
-	YuThread(Socket s) {
+	SocketThread(Socket s) {
 		this.s = s;
 	}
 
@@ -25,8 +25,7 @@ public class YuThread implements Callable<Boolean> {
 			InputStream is = s.getInputStream();
 			OutputStream os = s.getOutputStream();
 			BufferedReader br = new BufferedReader(new InputStreamReader(is, "utf-8"));
-			while ((tmp = br.readLine()) != null) {
-				recData += tmp;
+			recData=br.readLine();
 				if (Thread.currentThread().isInterrupted())// thread timeout
 				{
 
@@ -36,7 +35,6 @@ public class YuThread implements Callable<Boolean> {
 					s.close();
 					return false;
 				}
-			}
 			String bmsg=MainPresenter.recAndBackMsg(recData);
 
 			os.write(( bmsg+ "\n").getBytes("utf-8"));

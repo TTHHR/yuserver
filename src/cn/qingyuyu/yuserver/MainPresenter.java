@@ -9,6 +9,59 @@ import org.json.JSONStringer;
 public class MainPresenter {
     public static String recAndBackMsg(String msg)
     {
+        if(msg.startsWith("GET"))//处理http内容
+        {
+                System.out.println(msg);
+                int begin = msg.indexOf("/");
+                int end = msg.indexOf("HTTP/");
+                String condition=msg.substring(begin, end);
+                System.out.println("GET参数是："+condition);
+                String bakMsg="";
+                if(condition.equals("/ "))
+                {
+                     bakMsg="HTTP/1.1 200 OK\n";
+                    bakMsg+="type:text/html\n\n";
+                    bakMsg+="<head>\n" +
+                            "<meta charset=\"UTF-8\">\n" +
+                            "<title>登录查看信息</title>\n" +
+                            "</head>";
+                    bakMsg+="<form action=\"/login.jsp\" method=\"get\">\n" +
+                            "Token: <input type=\"password\" name=\"user_pass\" /><br />\n" +
+                            "<input type=\"submit\" />\n" +
+                            "</form>";
+
+                }
+                else if(condition.startsWith("/login.jsp"))
+                {
+                    bakMsg="HTTP/1.1 200 OK\n";
+                    bakMsg+="type:text/html\n\n";
+                    bakMsg+="<head>\n" +
+                            "<meta charset=\"UTF-8\">\n" +
+                            "<title>查看信息</title>\n" +
+                            "</head>";
+                     begin = msg.indexOf("s=")+2;
+                     end = msg.lastIndexOf(" ");
+                     if(end==-1)
+                         end=msg.length();
+                     String token=msg.substring(begin, end);
+                    User u = new User(token);
+                    if (u.checkUser())// user in our database
+                    {
+                        bakMsg+="<h1>"+u.getDataFromBase()+"</h1><br />";
+                    }
+                    bakMsg+="<h1>"+token+"</h1>";
+                }
+               else
+                {
+                    bakMsg="HTTP/1.1 404 NOT FOUND\n\n";
+                }
+
+
+                return bakMsg ;
+        }
+
+
+
         JSONStringer sendDataJson = new JSONStringer();
         try {
             JSONObject recJson;
