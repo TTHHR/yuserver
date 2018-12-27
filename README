@@ -2,7 +2,7 @@
 
 port 2333 for socket
 
-port 2334 for udp
+port 1234 for udp
 
 etc.
 
