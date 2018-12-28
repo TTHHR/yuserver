@@ -4,6 +4,7 @@ port 2333 for socket
 
 port 1234 for udp
 
+port 8080 for http
 etc.
 
 

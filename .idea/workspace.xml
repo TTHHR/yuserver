@@ -7,27 +7,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a56c88ae-9939-4784-ae62-89f650feb4e9" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/yuserver.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/cn/qingyuyu/yuserver/HttpThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/yuserver_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/bin/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/cn/qingyuyu/yuserver/YuServer$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/cn/qingyuyu/yuserver/YuServer$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/cn/qingyuyu/yuserver/YuServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/cn/qingyuyu/yuserver/YuServer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/cn/qingyuyu/yuserver/YuThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/cn/qingyuyu/yuserver/YuThread.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/yuserver/cn/qingyuyu/yuserver/MainPresenter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/yuserver/cn/qingyuyu/yuserver/MainPresenter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/yuserver/cn/qingyuyu/yuserver/UdpThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/yuserver/cn/qingyuyu/yuserver/UdpThread.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/yuserver/cn/qingyuyu/yuserver/YuServer$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/yuserver/cn/qingyuyu/yuserver/YuServer$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/yuserver/cn/qingyuyu/yuserver/YuServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/yuserver/cn/qingyuyu/yuserver/YuServer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/yuserver/cn/qingyuyu/yuserver/YuThread.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/yuserver/cn/qingyuyu/yuserver/util/Log.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/yuserver/cn/qingyuyu/yuserver/util/Log.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/yuserver/cn/qingyuyu/yuserver/util/SqlHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/yuserver/cn/qingyuyu/yuserver/util/SqlHelper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/yuserver/cn/qingyuyu/yuserver/util/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/yuserver/cn/qingyuyu/yuserver/util/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README" beforeDir="false" afterPath="$PROJECT_DIR$/README" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/cn/qingyuyu/yuserver/MainPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/qingyuyu/yuserver/MainPresenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cn/qingyuyu/yuserver/YuServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/qingyuyu/yuserver/YuServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cn/qingyuyu/yuserver/YuThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/qingyuyu/yuserver/SocketThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/qingyuyu/yuserver/SocketThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/qingyuyu/yuserver/SocketThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/qingyuyu/yuserver/util/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/qingyuyu/yuserver/util/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dbinfo.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/dbinfo.properties" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -38,16 +23,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="YuServer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/cn/qingyuyu/yuserver/YuServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="627">
-              <caret line="55" column="71" lean-forward="true" selection-start-line="55" selection-start-column="71" selection-end-line="55" selection-end-column="71" />
-              <folding>
-                <element signature="e#492#521#1" expanded="true" />
-                <element signature="e#1450#1479#1" expanded="true" />
-              </folding>
+            <state relative-caret-position="969">
+              <caret line="55" column="71" selection-start-line="55" selection-start-column="71" selection-end-line="55" selection-end-column="71" />
             </state>
           </provider>
         </entry>
@@ -55,12 +36,10 @@
       <file leaf-file-name="HttpThread.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/cn/qingyuyu/yuserver/HttpThread.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="34" column="33" lean-forward="true" selection-start-line="34" selection-start-column="33" selection-end-line="34" selection-end-column="33" />
+            <state relative-caret-position="475">
+              <caret line="34" column="33" selection-start-line="34" selection-start-column="33" selection-end-line="34" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#122#123#0" expanded="true" />
-                <element signature="e#139#140#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -69,17 +48,35 @@
       <file leaf-file-name="MainPresenter.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/cn/qingyuyu/yuserver/MainPresenter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="49" column="71" selection-start-line="49" selection-start-column="71" selection-end-line="49" selection-end-column="71" />
+            <state relative-caret-position="-1710">
+              <caret line="16" column="53" selection-start-line="16" selection-start-column="53" selection-end-line="16" selection-end-column="53" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dbinfo.properties" pinned="false" current-in-tab="true">
+      <file leaf-file-name="dbinfo.properties" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/dbinfo.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+            <state>
+              <caret column="37" selection-start-column="37" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SqlHelper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cn/qingyuyu/yuserver/util/SqlHelper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2527">
+              <caret line="149" column="28" selection-start-line="149" selection-start-column="15" selection-end-line="149" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="114">
+              <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -87,12 +84,21 @@
       <file leaf-file-name="SocketThread.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/cn/qingyuyu/yuserver/SocketThread.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="379">
-              <caret line="36" column="17" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="17" />
+            <state relative-caret-position="278">
+              <caret line="39" column="50" selection-start-line="39" selection-start-column="50" selection-end-line="39" selection-end-column="50" />
               <folding>
                 <element signature="e#343#344#0" expanded="true" />
                 <element signature="e#360#361#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="User.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/cn/qingyuyu/yuserver/util/User.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="247">
+              <caret line="29" column="5" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -118,10 +124,12 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/cn/qingyuyu/yuserver/YuServer.java" />
-        <option value="$PROJECT_DIR$/src/cn/qingyuyu/yuserver/SocketThread.java" />
         <option value="$PROJECT_DIR$/src/cn/qingyuyu/yuserver/HttpThread.java" />
+        <option value="$PROJECT_DIR$/README" />
         <option value="$PROJECT_DIR$/src/cn/qingyuyu/yuserver/MainPresenter.java" />
+        <option value="$PROJECT_DIR$/src/cn/qingyuyu/yuserver/SocketThread.java" />
         <option value="$PROJECT_DIR$/src/dbinfo.properties" />
+        <option value="$PROJECT_DIR$/src/cn/qingyuyu/yuserver/util/User.java" />
       </list>
     </option>
   </component>
@@ -147,18 +155,25 @@
             <path>
               <item name="yuserver" type="b2602c69:ProjectViewProjectNode" />
               <item name="yuserver" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="yuserver" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yuserver" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
+              <item name="libs" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="yuserver" type="b2602c69:ProjectViewProjectNode" />
               <item name="yuserver" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="yuserver" type="b2602c69:ProjectViewProjectNode" />
+              <item name="yuserver" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="yuserver" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="yuserver" type="b2602c69:ProjectViewProjectNode" />
+              <item name="yuserver" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="yuserver" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -254,64 +269,93 @@
       <option name="presentableId" value="Default" />
       <updated>1545895059370</updated>
     </task>
+    <task id="LOCAL-00001" summary="增加了网页查看信息">
+      <created>1545902301154</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1545902301154</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info anchor="right" id="Palette" />
+      <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="right" id="Maven Projects" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3299435" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info id="Designer" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info anchor="bottom" id="Messages" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="right" id="Maven Projects" order="3" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3299435" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="7" visible="true" weight="0.3299435" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info id="Designer" order="2" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info id="UI Designer" />
+      <window_info id="UI Designer" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="增加了网页查看信息" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加了网页查看信息" />
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/2018-12-27.log">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/cn/qingyuyu/yuserver/YuServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="627">
-          <caret line="55" column="71" lean-forward="true" selection-start-line="55" selection-start-column="71" selection-end-line="55" selection-end-column="71" />
+        <state relative-caret-position="969">
+          <caret line="55" column="71" selection-start-line="55" selection-start-column="71" selection-end-line="55" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/qingyuyu/yuserver/HttpThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="34" column="33" selection-start-line="34" selection-start-column="33" selection-end-line="34" selection-end-column="33" />
           <folding>
-            <element signature="e#492#521#1" expanded="true" />
-            <element signature="e#1450#1479#1" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/qingyuyu/yuserver/UdpThread.java">
+    <entry file="file://$PROJECT_DIR$/src/cn/qingyuyu/yuserver/MainPresenter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        <state relative-caret-position="228">
+          <caret line="16" column="53" selection-start-line="16" selection-start-column="53" selection-end-line="16" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dbinfo.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="23" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cn/qingyuyu/yuserver/SocketThread.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
+        <state relative-caret-position="513">
           <caret line="36" column="17" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="17" />
           <folding>
             <element signature="e#343#344#0" expanded="true" />
@@ -320,21 +364,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/qingyuyu/yuserver/YuServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="969">
+          <caret line="55" column="71" selection-start-line="55" selection-start-column="71" selection-end-line="55" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/cn/qingyuyu/yuserver/HttpThread.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="34" column="33" lean-forward="true" selection-start-line="34" selection-start-column="33" selection-end-line="34" selection-end-column="33" />
+        <state relative-caret-position="646">
+          <caret line="34" column="33" selection-start-line="34" selection-start-column="33" selection-end-line="34" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#122#123#0" expanded="true" />
-            <element signature="e#139#140#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cn/qingyuyu/yuserver/MainPresenter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
+        <state relative-caret-position="931">
           <caret line="49" column="71" selection-start-line="49" selection-start-column="71" selection-end-line="49" selection-end-column="71" />
         </state>
       </provider>
@@ -343,6 +392,91 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="57">
           <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/qingyuyu/yuserver/SocketThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="36" column="17" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="17" />
+          <folding>
+            <element signature="e#343#344#0" expanded="true" />
+            <element signature="e#360#361#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2018-12-27.log" />
+    <entry file="file://$PROJECT_DIR$/src/cn/qingyuyu/yuserver/UdpThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/qingyuyu/yuserver/YuServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="969">
+          <caret line="55" column="71" selection-start-line="55" selection-start-column="71" selection-end-line="55" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/qingyuyu/yuserver/HttpThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="34" column="33" selection-start-line="34" selection-start-column="33" selection-end-line="34" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/qingyuyu/yuserver/MainPresenter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1710">
+          <caret line="16" column="53" selection-start-line="16" selection-start-column="53" selection-end-line="16" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/qingyuyu/yuserver/util/SqlHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2527">
+          <caret line="149" column="28" selection-start-line="149" selection-start-column="15" selection-end-line="149" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/qingyuyu/yuserver/SocketThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="39" column="50" selection-start-line="39" selection-start-column="50" selection-end-line="39" selection-end-column="50" />
+          <folding>
+            <element signature="e#343#344#0" expanded="true" />
+            <element signature="e#360#361#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dbinfo.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="37" selection-start-column="37" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/qingyuyu/yuserver/util/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="29" column="5" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
         </state>
       </provider>
     </entry>

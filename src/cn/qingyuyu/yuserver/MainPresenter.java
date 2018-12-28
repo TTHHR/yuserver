@@ -11,11 +11,10 @@ public class MainPresenter {
     {
         if(msg.startsWith("GET"))//处理http内容
         {
-                System.out.println(msg);
                 int begin = msg.indexOf("/");
                 int end = msg.indexOf("HTTP/");
                 String condition=msg.substring(begin, end);
-                System.out.println("GET参数是："+condition);
+                Log.getInstance().i("GET",condition);
                 String bakMsg="";
                 if(condition.equals("/ "))
                 {

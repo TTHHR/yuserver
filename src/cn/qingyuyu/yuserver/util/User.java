@@ -45,6 +45,8 @@ public class User {
 
         return b;
     }
+
+
     public String getDataFromBase() {
         String data = null;
         String sql = "Select * from yudata where token=?";
