@@ -26,7 +26,6 @@ public class SocketThread implements Callable<Boolean> {
 			OutputStream os = s.getOutputStream();
 			BufferedReader br = new BufferedReader(new InputStreamReader(is, "utf-8"));
 			recData=br.readLine();
-			Log.getInstance().d("socket rec",recData);
 				if (Thread.currentThread().isInterrupted())// thread timeout
 				{
 
@@ -37,7 +36,6 @@ public class SocketThread implements Callable<Boolean> {
 					return false;
 				}
 			String bmsg=MainPresenter.recAndBackMsg(recData);
-			Log.getInstance().d("socket send",bmsg);
 			os.write(( bmsg+ "\n").getBytes("utf-8"));
 			os.flush();
 			s.shutdownOutput();

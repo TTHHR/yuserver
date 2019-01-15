@@ -1,7 +1,9 @@
 package cn.qingyuyu.yuserver;
 
+import cn.qingyuyu.yuserver.util.HttpUtils;
 import cn.qingyuyu.yuserver.util.Log;
 import cn.qingyuyu.yuserver.util.User;
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.json.JSONStringer;
@@ -99,7 +101,46 @@ public class MainPresenter {
                         sendDataJson.value(System.currentTimeMillis() / 1000L);
                         sendDataJson.key("data");
                         sendDataJson.value(u.getDataFromBase());
-                    } else {
+                    } else if(recJson.getString("need").equals("ai"))
+                    {
+                        //与图灵机器人交流
+                        try {
+                            JSONObject param = new JSONObject();
+
+                            param.put("reqType",0);
+
+                            JSONObject inputText = new JSONObject();
+                            inputText.put("text",recJson.getString("data"));
+
+                            JSONObject perception = new JSONObject();
+                            perception.put("inputText",inputText);
+
+                            param.put("perception",perception);
+
+                            JSONObject userInfo = new JSONObject();
+                            userInfo.put("apiKey","fe8a67da");
+                            userInfo.put("userId","29");
+
+                            param.put("userInfo",userInfo);
+
+                            String result=HttpUtils.doPost("http://openapi.tuling123.com/openapi/api/v2",param.toString());
+
+                            JSONObject jsonObject =new JSONObject(result);
+                            JSONArray ja=jsonObject.getJSONArray("results");
+                            JSONObject value=ja.getJSONObject(0).getJSONObject("values");
+
+                            sendDataJson.key("code");
+                            sendDataJson.value("ok");
+                            sendDataJson.key("time");
+                            sendDataJson.value(System.currentTimeMillis() / 1000L);
+                            sendDataJson.key("data");
+                            sendDataJson.value(value.getString("text"));
+                        }catch (Exception e)
+                        {
+                            Log.getInstance().e("ai",e.toString());
+                        }
+                    }
+                    else {
                         sendDataJson.key("code");
                         sendDataJson.value("fail");
                         sendDataJson.key("msg");
