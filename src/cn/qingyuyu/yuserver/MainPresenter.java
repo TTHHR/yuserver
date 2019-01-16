@@ -9,7 +9,7 @@ import org.json.JSONObject;
 import org.json.JSONStringer;
 
 public class MainPresenter {
-    public static String recAndBackMsg(String msg)
+    public static byte[] recAndBackMsg(String msg)
     {
         if(msg.startsWith("GET"))//处理http内容
         {
@@ -58,14 +58,14 @@ public class MainPresenter {
                 }
 
 
-                return bakMsg ;
+                return bakMsg.getBytes() ;
         }
 
 
 
         JSONStringer sendDataJson = new JSONStringer();
         try {
-            JSONObject recJson;
+            JSONObject recJson=null;
             sendDataJson.object();
             try {
                 recJson = new JSONObject(msg);
@@ -81,7 +81,12 @@ public class MainPresenter {
                 if (u.checkUser())// user in our database
                 {
                     if (recJson.getString("need").equals("set")) {
-                        if (!u.insertIntoDatabase(recJson.getString("data")))// have some error when try to store up this data
+                        String data=recJson.getString("data");
+                        if(recJson.has("encrypt"))
+                        {
+                            data=new String(recJson.getString("data").getBytes(recJson.getString("encrypt")),"utf-8");
+                        }
+                        if (!u.insertIntoDatabase(data))// have some error when try to store up this data
                         {
                             sendDataJson.key("code");
                             sendDataJson.value("fail");
@@ -163,10 +168,15 @@ public class MainPresenter {
                 Log.getInstance().e("json", e.toString());
             }
             sendDataJson.endObject();
+            if(recJson!=null&&recJson.has("encrypt"))
+            {
+                return sendDataJson.toString().getBytes(recJson.getString("encrypt"));
+            }
         }catch (Exception e)
         {
             Log.getInstance().e("recandback",e.toString());
         }
-        return sendDataJson.toString();
+
+        return sendDataJson.toString().getBytes();
     }
 }

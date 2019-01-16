@@ -35,9 +35,10 @@ public class HttpThread implements Callable<Boolean> {
                     return false;
                 }
             s.shutdownInput();
-            String bmsg=MainPresenter.recAndBackMsg(recData);
+            byte[] bmsg=MainPresenter.recAndBackMsg(recData);
 
-            os.write(( bmsg+ "\n").getBytes("utf-8"));
+            os.write( bmsg);
+            os.write('\n');
             os.flush();
 
             s.shutdownOutput();

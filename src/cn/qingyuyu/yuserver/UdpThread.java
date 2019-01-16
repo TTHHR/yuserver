@@ -30,11 +30,11 @@ public class UdpThread implements Runnable {
                 String receStr = new String(datagramPacket.getData(), 0 , datagramPacket.getLength());
 
 
-                String bmsg="";
+                byte[] bmsg;
                 if(!receStr.equals(""))
                  bmsg=MainPresenter.recAndBackMsg(receStr);
                 else
-                    bmsg="{\"code\":\"file\",\"msg\":\"time out\"}";
+                    bmsg="{\"code\":\"file\",\"msg\":\"time out\"}".getBytes();
                 /***** 返回ACK消息数据报*/
                 // 组装数据报
                 byte[] buf = (bmsg+"\n").getBytes();

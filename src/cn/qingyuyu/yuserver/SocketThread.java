@@ -35,8 +35,9 @@ public class SocketThread implements Callable<Boolean> {
 					s.close();
 					return false;
 				}
-			String bmsg=MainPresenter.recAndBackMsg(recData);
-			os.write(( bmsg+ "\n").getBytes("utf-8"));
+			byte[] bmsg=MainPresenter.recAndBackMsg(recData);
+			os.write( bmsg);
+			os.write('\n');
 			os.flush();
 			s.shutdownOutput();
 		} catch (Exception e) {
