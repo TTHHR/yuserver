@@ -19,12 +19,13 @@ public class HttpThread implements Callable<Boolean> {
     @Override
     public Boolean call() throws Exception {
         try {
-            String recData = "";
+            byte[] tmp=new byte[500];
+            byte[] recData = new byte[500];
 
             InputStream is = s.getInputStream();
             OutputStream os = s.getOutputStream();
-            BufferedReader br = new BufferedReader(new InputStreamReader(is, "utf-8"));
-            recData=br.readLine();
+            int i=is.read(tmp);
+            System.arraycopy(tmp,0,recData,0,i);
             if (Thread.currentThread().isInterrupted())// thread timeout
                 {
                     System.out.println("超时");

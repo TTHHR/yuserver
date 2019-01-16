@@ -20,12 +20,13 @@ public class SocketThread implements Callable<Boolean> {
 	public Boolean call() throws Exception {
 		// TODO Auto-generated method stub
 		try {
-			String recData = "", tmp = null;
-
+            byte [] tmp=new byte[500];
+            byte[] data=new byte[500];
 			InputStream is = s.getInputStream();
 			OutputStream os = s.getOutputStream();
-			BufferedReader br = new BufferedReader(new InputStreamReader(is, "utf-8"));
-			recData=br.readLine();
+
+			int i=is.read(tmp);
+            System.arraycopy(tmp,0,data,0,i);
 				if (Thread.currentThread().isInterrupted())// thread timeout
 				{
 
@@ -35,7 +36,7 @@ public class SocketThread implements Callable<Boolean> {
 					s.close();
 					return false;
 				}
-			byte[] bmsg=MainPresenter.recAndBackMsg(recData);
+			byte[] bmsg=MainPresenter.recAndBackMsg(data);
 			os.write( bmsg);
 			os.write('\n');
 			os.flush();

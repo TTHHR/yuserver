@@ -9,8 +9,9 @@ import org.json.JSONObject;
 import org.json.JSONStringer;
 
 public class MainPresenter {
-    public static byte[] recAndBackMsg(String msg)
+    public static byte[] recAndBackMsg(byte[] bmsg)
     {
+        String msg=new String (bmsg);
         if(msg.startsWith("GET"))//处理http内容
         {
                 int begin = msg.indexOf("/");
@@ -84,7 +85,9 @@ public class MainPresenter {
                         String data=recJson.getString("data");
                         if(recJson.has("encrypt"))
                         {
-                            data=new String(recJson.getString("data").getBytes(recJson.getString("encrypt")),"utf-8");
+                            data=new String(bmsg,recJson.getString("encrypt"));
+                            recJson=new JSONObject(data);
+                            data=recJson.getString("data");
                         }
                         if (!u.insertIntoDatabase(data))// have some error when try to store up this data
                         {
@@ -106,6 +109,7 @@ public class MainPresenter {
                         sendDataJson.value(System.currentTimeMillis() / 1000L);
                         sendDataJson.key("data");
                         sendDataJson.value(u.getDataFromBase());
+                        System.out.println("数据库拿出来"+u.getDataFromBase());
                     } else if(recJson.getString("need").equals("ai"))
                     {
                         //与图灵机器人交流
@@ -115,7 +119,14 @@ public class MainPresenter {
                             param.put("reqType",0);
 
                             JSONObject inputText = new JSONObject();
-                            inputText.put("text",recJson.getString("data"));
+                            String data=recJson.getString("data");
+                            if(recJson.has("encrypt"))
+                            {
+                                data=new String(bmsg,recJson.getString("encrypt"));
+                                recJson=new JSONObject(data);
+                                data=recJson.getString("data");
+                            }
+                            inputText.put("text",data);
 
                             JSONObject perception = new JSONObject();
                             perception.put("inputText",inputText);
@@ -123,8 +134,8 @@ public class MainPresenter {
                             param.put("perception",perception);
 
                             JSONObject userInfo = new JSONObject();
-                            userInfo.put("apiKey","fe8a67da");
-                            userInfo.put("userId","29");
+                            userInfo.put("apiKey","feda");
+                            userInfo.put("userId","2");
 
                             param.put("userInfo",userInfo);
 
